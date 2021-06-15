@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html>
+   <head>
+	<meta charset="utf-8" />
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+        <style>
+	   body {background-image:url(media/true_resized.jpg);
+	         background-repeat:repeat-x;}		
+	   d {font-family: 'Permanent Marker', cursive;}
+	   c {font-family: 'Kaushan Script', cursive;}
+	   span {font-family: 'Satisfy', cursive;}
+	   .left {float:left;width:30%}
+	   .right{float:right;width:70%}
+	   #right {float:right;}
+	   #left {float:left;}
+	   .righta {float:right;width:48%;}
+	   .rightb {float:right;width:70%;}
+	</style>
+   </head>
+   <body>
+	<div id="left"><a href="page3.html"  style="text-decoration:none;"><d style="font-size:3em;color:red">Sun<span style="color:green"><b>Hospital</b></span></d></div></a>
+	<br><br>
+	<div id="right"><h3 id="mytime"></h3></div>
+	<script>
+	    showTime();
+	    function showTime(){
+		var d=new Date();
+		document.getElementById("mytime").innerHTML=d.toLocaleTimeString();
+	        setTimeout(showTime,1000);
+	    	}
+	</script>
+	<br><br><br>
+	<form name="login">
+	<div class="righta"><h1>私訊給醫生</h1></div>
+	<br><br><br>
+	<div class="rightb">
+	<select name="doctor" multiple>
+	<optgroup label="男">	
+	<option value="1">Dr.Mike
+	<option value="2">Dr.Peter
+	<option value="3">Dr.Tom
+	<option value="4">Dr.Ryan
+	</optgroup>
+	<optgroup label="女">	
+	<option value="5">Dr.Alice
+	<option value="6">Dr.Apple
+	</optgroup>
+	</select>
+	<br>
+	<textarea cols="100" rows="20">留言給醫生.....</textarea>
+	<br>
+	<input type="submit" value="送出">
+	</form>
+	</div>
+	<br><br><br><br>
+	<marquee behavior=side direction="right"><img src="media/ambulance_resized.jpg"></marquee>
+   </body>
+</html>

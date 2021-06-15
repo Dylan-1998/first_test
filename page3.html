@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+	<meta charset="utf-8" />
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <style>
+	body {background-image:url(media/true_resized.jpg);
+	      background-repeat:repeat-x;}
+        d {font-family: 'Permanent Marker', cursive;}
+	c {font-family: 'Kaushan Script', cursive;}
+	span {font-family: 'Satisfy', cursive;}
+	#left  {float:left;width:30%;border:1px black solid}
+	#right {float:right;width:22%}
+	.right {float:right;}
+	.left {float:left;width:15%}
+	div {clear:right;}
+	 .small{width:0px;}
+    	#big {width:900px;height:550px}
+	#blur {filter:blur(5px);
+		-webkit-fliter:blur(5px);
+    	      }
+     </style>
+     <script>
+ 	setInterval(play, 2000);
+	var index=0
+
+	function play(){
+	   var imgs=document.getElementById("thumbs").getElementsByTagName("img");
+	   var bigImg =document.getElementById("big");
+
+	   index++
+	   if(index ==imgs.length) index=0;
+
+	   bigImg.setAttribute("src" ,imgs[index].getAttribute("src"));
+        }
+      </script>
+    </head>
+    <body>
+	<a href="page3.html" style="text-decoration:none"><d style="font-size:3em;color:red">Sun<span style="color:green"><b>Hospital</b></span></d></div></a>
+	<div class="right"><br><br><h3 id="mytime"><h3></div><hr>
+	<div class="left">
+	<h1><c>Patient</c></h1>
+	  <ul style="font-size:1.25em">
+	     <li><a href="page2.html">填寫住院申請</a></li><br><br>
+	     <li><a href="page4.html">預約/掛號</a></li><br><br>
+	     <li><a href="page7.html">取消預約</a></li><br><br>
+	     <li><a href="page6.html">預約門診查詢</a></li><br><br>
+	     <li><a href="page8.html">關於醫生</a></li><br><br>
+	     <li><a href="page10.html">私訊給醫生</a></li><br>
+	  </ul>
+	<h1><c>Doctor</c></h1>
+	  <ul style="font-size:1.25em">
+	     <li><a href="page11.html">員工登入</a></li>
+	  </ul>
+	<script>
+	$('a').mouseenter(function(){
+	      $(this).css('font-weight','bold');
+	});
+
+	$('a').mouseleave(function(){
+	      $(this).css('font-weight','normal');
+	});
+	</script>
+	</div>
+	<div id="right">
+	<h1><c>News</c><h1>
+	<div style="width:300px;height:570px;overflow-x:hidden;overflow-y:auto;background-color:white;">
+	<table border="1">
+	<tr>
+	<td><a href="page12.html"><img id="blur" src="media/15078030119048_resized.jpg"></a></td>
+	</tr>
+	<tr>
+    	<td style="vertical-align:text-top;"><a href="page12.html"><font size="4">研究顯示!!吸菸危害肺( 圖片不適 )</font></a></td>
+	</tr>
+	</table>
+	<table border="1">
+	<tr>
+	<td><a href="page13.html"><img src="media/Untitled-1-22_resized.jpg"></a></td>
+	</tr>
+	<tr>
+    	<td style="vertical-align:text-top;"><a href="page13.html"><font size="4">日本已研發出對抗智障的藥!</font></a></td>
+	</tr>
+	</table>
+	<table border="1">
+	<tr>
+	<td><a href="page14.html"><img src="media/1TU9A57-0_resized.jpg"></a></td>
+	</tr>
+	<tr>
+    	<td style="vertical-align:text-top;"><a href="page14.html"><font size="4">超級病毒出現!下個月將肆虐火星</font></a></td>
+	</tr>
+	</table>
+	<table border="1">
+	<tr>
+	<td><a href="page15.html"><img src="media/36260388231_cd75148f05_c_resized.jpg"></a></td>
+	</tr>
+	<tr>
+    	<td style="vertical-align:text-top;"><a href="page15.html"><font size="4">明天吃甚麼? 醫生告訴你!</font></a></td>
+	</tr>
+	</table>
+	</div>
+	</div>
+	<h1><c>About Hospital:</c><h1>
+	<img id="big" src="media/1289297714233.jpg">
+	<div id="thumbs">
+	<img class="small" src="media/1289297714233.jpg">
+	<img class="small" src="media/1608975590y6bgw.jpg">
+	<img class="small" src="media/hospital.jpg">
+	<img class="small" src="media/site_197_Cantonese_385541.jpg">
+	</div>
+	<script>
+	    showTime();
+	    function showTime(){
+		var d=new Date();
+		document.getElementById("mytime").innerHTML=d.toLocaleTimeString();
+	        setTimeout(showTime,1000);
+	    	}
+	</script>
+
+
+    </body>
+</html>

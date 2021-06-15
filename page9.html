@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html>
+   <head>
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+	<style>
+	   body {background-image:url(media/true_resized.jpg);
+	         background-repeat:repeat-x;}		
+	   d {font-family: 'Permanent Marker', cursive;}
+	   c {font-family: 'Kaushan Script', cursive;}
+	   span {font-family: 'Satisfy', cursive;}
+	   #right {float:right;}
+	   #left {float:left;}
+	</style>
+   </head>
+   <body>
+	<div id="left"><a href="page8.html"  style="text-decoration:none;"><d style="font-size:3em;color:red">Sun<span style="color:green"><b>Hospital</b></span></d></div></a>
+	<br><br>
+	<div id="right"><h3 id="mytime"></h3></div>
+	<script>
+	    showTime();
+	    function showTime(){
+		var d=new Date();
+		document.getElementById("mytime").innerHTML=d.toLocaleTimeString();
+	        setTimeout(showTime,1000);
+	    	}
+	</script>
+	<br><br><br>
+	<p align="center">
+	<font size="6"><b>~我們是眼科醫師~</b></font>
+	<font size="6"><marquee behavior=side direction="right"><b>---------------有任何問題歡迎洽詢---------------</b></marquee></font>
+	</p>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<img src="media/5.jpg" width="245" height="276">
+	<img src="media/4.jpg" width="245" height="276">
+	<img src="media/7.jpg" width="245" height="276">
+	<img src="media/3.jpg" width="245" height="276">
+	<img src="media/9.jpg" width="255" height="276">
+	<img src="media/6.jpg" width="245" height="276">
+   </body>
+</html>

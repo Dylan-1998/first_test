@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+
+<html>
+   <head>
+	<meta charset="utf-8" />
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+        <style>
+	   body {background-image:url(media/true_resized.jpg);
+	         background-repeat:repeat-x;}		
+	   d {font-family: 'Permanent Marker', cursive;}
+	   c {font-family: 'Kaushan Script', cursive;}
+	   span {font-family: 'Satisfy', cursive;}
+	   .left {float:left;width:30%}
+	   .right{float:right;width:70%}
+	   #right {float:right;}
+	   #left {float:left;}
+	</style>
+   </head>
+   <body>
+	<div id="left"><a href="page3.html"  style="text-decoration:none;"><d style="font-size:3em;color:red">Sun<span style="color:green"><b>Hospital</b></span></d></div></a>
+	<br><br>
+	<div id="right"><h3 id="mytime"></h3></div>
+	<script>
+	    showTime();
+	    function showTime(){
+		var d=new Date();
+		document.getElementById("mytime").innerHTML=d.toLocaleTimeString();
+	        setTimeout(showTime,1000);
+	    	}
+	</script>
+	<br><br><br><br>
+	<form name="login">
+	<div class="right">
+	<h2>住院申請</h2>
+	<table style="border:3px gray solid;" border="1">
+	<tr>
+	<td colspan="8">病患資料(請填寫真實的病人資料)</td>
+	</tr>
+	<tr>
+	<td colspan="2">姓 名</td>
+	<td colspan="2"><input name="name" type="text" size="10"></td>
+	<td colspan="2">性 別</td>
+	<td colspan="2"><input name="sex" type="radio" value="male">男
+	    <input name="sex" type="radio" value="female">女</td>
+	</tr>
+	<tr>
+	<td colspan="2">身 分 證</td>
+	<td colspan="2"><input name="number" type="text" size="10"></td>
+	<td colspan="2">電 話</td>
+	<td colspan="2"><input name="phone" type="text" size="10"></td>
+	</tr>
+	<tr>
+	<td colspan="2">選擇房間</td>
+	<td colspan="2"><input name="room" type="radio" value="A">總統房
+			<input name="room" type="radio" value="B">單人床
+			<input name="room" type="radio" value="C">雙人床
+			<input name="room" type="radio" value="D">四人房
+	<td colspan="2">申請時間</td>
+	<td colspan="2"><input name="setdate" type="date">
+	</tr>
+	<tr>
+	<td colspan="2">聯 絡 地 址</td>
+	<td colspan="6"><input name="address" type="test" size="80"></td>
+	</tr>
+	<tr>
+	<td colspan="2">遺傳病史</td>
+	<td colspan="6"><input name="illness" type="checkbox" value="a">氣喘
+			<input name="illness" type="checkbox" value="b">蠶豆症
+			<input name="illness" type="checkbox" value="c">鐮刀行貧血
+			<input name="illness" type="checkbox" value="d">心臟病
+			<input name="illness" type="checkbox" value="e">糖尿病
+			<input name="illness" type="checkbox" value="e">其他&nbsp<u>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</u>&nbsp</td>	
+	</tr>
+	<tr>
+	<td colspan="8">緊急聯絡人資料(請填寫真實的緊急聯絡人資料)</td>
+	</tr>
+	<tr>
+	<td colspan="2">姓名</td>
+	<td colspan="2"><input name="name" type="text" size="10"></td>
+	<td colspan="2">與 病 患 關 係</td>
+	<td colspan="2"><select name="relative">
+	<optgroup label="有血緣">
+	<option value="1">父親
+	<option value="2">母親
+	<option value="3">祖父
+	<option value="4">祖母
+	<option value="5">兄弟
+	<option value="6">姊妹
+	</optgroup>
+	<optgroup label="無血緣">
+	<option value="7">丈夫
+	<option value="8">妻子
+	<option value="9">朋友
+	<option value="10">其他
+	</optgroup>
+	</select>
+	</td>
+	<tr>
+	<td colspan="2">身 分 證</td>
+	<td colspan="2"><input name="number" type="text" size="10"></td>
+	<td colspan="2">電 話</td>
+	<td colspan="2"><input name="phone" type="text" size="10"></td>
+	</tr>
+	<tr>
+	<td colspan="2">聯 絡 地 址</td>
+	<td colspan="6"><input name="address" type="test" size="80"></td>
+	</tr>
+	</table>
+	<br>
+	<input type="reset" value="清除選項">&nbsp&nbsp
+	<input type="submit" value="送出">
+	</form>	
+	</div>
+	<br><br><br><br>
+	<marquee behavior=side direction="right"><img src="media/ambulance_resized.jpg"></marquee>
+   </body>
+</html>

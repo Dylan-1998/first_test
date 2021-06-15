@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+	<meta charset="utf-8" />
+	<title></title>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+	<style>
+	   body {background-image:url(media/true_resized.jpg);
+	         background-repeat:repeat-x;}		
+	   d {font-family: 'Permanent Marker', cursive;}
+	   c {font-family: 'Kaushan Script', cursive;}
+	   span {font-family: 'Satisfy', cursive;}
+	   #right {float:right;}
+	   #left {float:left;}
+	   #righta {float:right;width:50%;}
+	   #rightb {float:right;width:65%;}
+	</style>
+    </head>
+    <body>
+	<div id="left"><a href="page3.html" style="text-decoration:none;"><d style="font-size:3em;color:red">Sun<span style="color:green"><b>Hospital</b></span></d></div></a>
+	<br><br>
+	<div id="right"><h3 id="mytime"></h3></div>
+	<script>
+	    showTime();
+	    function showTime(){
+		var d=new Date();
+		document.getElementById("mytime").innerHTML=d.toLocaleTimeString();
+	        setTimeout(showTime,1000);
+	    	}
+	</script>
+	<br><br><br>
+	<div id="righta">
+	<h1>取消預約</h1>
+	</div>
+	<div id="rightb">
+	<h3>
+	姓名:<input id="name" type="text" size="15">身分證:<input id="card" type="text" size="15">
+	<button>取消預約</button>
+	</h3>
+	<script type="text/javascript">
+	
+		$('button').click(function(){
+		if ($('#name').val()=="")
+		alert("請輸入掛號姓名及身分證");
+		else if($('#card').val()=="")
+		alert("請輸入掛號姓名及身分證");
+		else
+		alert ("已取消預約");
+		});
+	</script>
+	</div>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<marquee behavior=side direction="right"><img src="media/ambulance_resized.jpg"></marquee>
+    </body>
+</html>

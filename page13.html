@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html>
+   <head>
+	<meta charset="utf-8" />
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+	 <style>
+	   body {background-image:url(media/true_resized.jpg);
+	         background-repeat:repeat-x;}		
+	   d {font-family: 'Permanent Marker', cursive;}
+	   c {font-family: 'Kaushan Script', cursive;}
+	   span {font-family: 'Satisfy', cursive;}
+	   .left {float:left;width:30%}
+	   .right{float:right;width:70%}
+	   #right {float:right;}
+	   #left {float:left;}
+	 </style>
+   <head>
+   <body>
+	<div id="left"><a href="page3.html"  style="text-decoration:none;"><d style="font-size:3em;color:red">Sun<span style="color:green"><b>Hospital</b></span></d></div></a>
+	<br><br>
+	<div id="right"><h3 id="mytime"></h3></div>
+	<script>
+	    showTime();
+	    function showTime(){
+		var d=new Date();
+		document.getElementById("mytime").innerHTML=d.toLocaleTimeString();
+	        setTimeout(showTime,1000);
+	    	}
+	</script>
+	<br><br><br>
+	<img src="media/Untitled-1-22.jpg">
+	<h1>"水喔"謝謝日本人!</h1>
+   </body>
+</html>

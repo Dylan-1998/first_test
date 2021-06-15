@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+     	<meta charset="utf-8" />
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+        <style>
+	   #right {float:right;}
+	   #left {float:left;}
+	   .left {float:left;width:30%}
+	   .right{float:right;width:30%}
+	   body {background-image:url(media/true_resized.jpg);
+	         background-repeat:repeat-x;}		
+	   d {font-family: 'Permanent Marker', cursive;}
+	   c {font-family: 'Kaushan Script', cursive;}
+	   span {font-family: 'Satisfy', cursive;}
+	</style>
+    </head>
+    <body>
+	<div id="left"><a href="page3.html"  style="text-decoration:none;"><d style="font-size:3em;color:red">Sun<span style="color:green"><b>Hospital</b></span></d></div></a>
+	<br><br>
+	<div id="right"><h3 id="mytime"></h3></div>
+	<script>
+	    showTime();
+	    function showTime(){
+		var d=new Date();
+		document.getElementById("mytime").innerHTML=d.toLocaleTimeString();
+	        setTimeout(showTime,1000);
+	    	}
+	</script>
+	<br><br><br><br>
+	<h2>預約門診查詢</h2>
+	<form name="login">
+	<div id="left">
+	<h3>
+	姓名:<input name="name" type="text" size="15">
+	身分證:<input name="card" type="text" size="15">
+	</h3>
+	</div>
+	</form>
+	<div class="right">
+	<h2>門診醫師時刻表</h2>
+	<table border="1" width=60%>
+	<tr>
+	<th>  </th>
+	<th>一</th>
+	<th>二</th>
+	<th>三</th>
+	<th>四</th>
+	<th>五</th>
+	</tr>
+	<tr>
+	<th>09:00～12:00</th>
+	<td>Dr.Peter</td>
+	<td>Dr.Alice</td>
+	<td>Dr.Apple</td>
+	<td>Dr.Tom</td>
+	<td>Dr.Ryan</td>
+	</tr>
+	<tr>
+	<th>13:30～16:30</th>
+	<td>Dr.Alice</td>
+	<td>Dr.Tom</td>
+	<td>Dr.Peter</td>
+	<td>Dr.Apple</td>
+	<td>Dr.Ryan</td>
+	</tr>
+	<tr>
+	<th>17:30～20:30</th>
+	<td>Dr.Ryan</td>
+	<td>Dr.Peter</td>
+	<td>Dr.Tom</td>
+	<td>Dr.Alice</td>
+	<td>Dr.Mike</td>
+	</tr>
+	</table>
+	</div>
+	<br><br><br><br>
+	<button onclick="
+		var p1= document.getElementById('sometext');
+		p1.innerHTML+='<b>查無資料&#33;<br></b>';">
+	查詢資料
+	</button>
+	<p id="sometext"></p>
+	<marquee behavior=side direction="right"><img src="media/ambulance_resized.jpg"></marquee>
+    </body>
+</html>

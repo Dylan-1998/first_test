@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+	<meta charset="utf-8" />
+	<title></title>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+        <style>
+	   body {background-image:url(media/true_resized.jpg);
+	         background-repeat:repeat-x;}		
+	   d {font-family: 'Permanent Marker', cursive;}
+	   c {font-family: 'Kaushan Script', cursive;}
+	   span {font-family: 'Satisfy', cursive;}
+	   e {color:blue;}
+	   f {color:red;}
+	   g {color:white;}
+	   #right {float:right;}
+	   #left {float:left;}
+	   #righta {float:right;width:50%;}
+	   #rightb {float:right;width:65%;}
+	</style>
+
+
+    </head>
+    <body>
+	<div id="left"><a href="page3.html" style="text-decoration:none;"><d style="font-size:3em;color:red">Sun<span style="color:green"><b>Hospital</b></span></d></div></a>
+	<br><br>
+	<div id="right"><h3 id="mytime"></h3></div>
+	<script>
+	    showTime();
+	    function showTime(){
+		var d=new Date();
+		document.getElementById("mytime").innerHTML=d.toLocaleTimeString();
+	        setTimeout(showTime,1000);
+	    	}
+	</script>
+	<br><br><br>
+	<div id="left">
+	<h2>注意事項</h2>
+	<ol type="1">
+	<li>本系統提供病人全年 24 小時服務。</li><br>
+	<li>若不能到，請至<e>取消預約</e>做消除，以免作業困難。</li><br>
+	<li>若<f>半年內有2次</f> 爽約紀錄，須到現場掛號後始可再行預約。</li><br>
+	<li>上午診09:00～12:00，下午診01:30～4:30，夜間診05:30～8:30。</li></br>
+	<li>有任何問題，歡迎撥打<f>(06)6654211(24小時服務)</f></li>
+	<g>有任何問題，歡迎撥打</g><e>(06)6654231(周一至周五7:30 -17:30)</e></li><br><br>
+	<li>謝謝使用本系統，祝你有個美好的一天。</li>
+	</ul>
+	</div>
+	<div id="righta">
+	<h1>預約/掛號</h1>
+	</div>
+	<br><br><br>
+	<div id="rightb">
+	<h3>
+	<p>姓名:<input id="name" type="text" size="15">身分證:<input id="card" type="text" size="15">
+	<button>預約掛號</button>
+	<p>您已預約<span id="peopleCount">0</span>個人<p>
+	<ul id="list"></ul>
+	</h3>
+	<script type="text/javascript">
+	
+		$('button').click(function(){
+		if ($('#name').val()=="")
+		alert("請輸入掛號姓名及身分證");
+		else if($('#card').val()=="")
+		alert("請輸入掛號姓名及身分證");
+		else
+		{
+		$('#list').append('<li>'+$('#name').val()+'&nbsp'+'&#40;'+$('#card').val()+'&#41;'+'</li>');
+		$('#name').val('');
+		$('#card').val('');
+		$("#peopleCount").text($('#list li').length);
+		alert("您已預約成功");
+		}
+		});
+	</script>
+	</div>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<marquee behavior=side direction="right"><img src="media/ambulance_resized.jpg"></marquee>
+    </body>
+</html>
